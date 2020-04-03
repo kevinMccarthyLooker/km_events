@@ -47,7 +47,7 @@ select * from step2
     sql: ${TABLE}.browser ;;
   }
 
-  dimension: city {
+  dimension: city_t {
     type: string
     sql: ${TABLE}.city ;;
   }

@@ -46,17 +46,17 @@ GROUP BY 1
     sql: 'count sessions: '||${session_count}||' | min: '||min(${session_events_count})||' | max:'||max(${session_events_count}) ;;
   }
 
-  dimension: session_has_cart_event {
+  dimension: session_has_cart_event2 {
     type: number
   }
-  measure: total_session_has_cart_event {
-    type: sum
-    sql: ${session_has_cart_event} ;;
-  }
-  measure: session_has_cart_event_summary {
-    group_label: "summary measures"
-    sql: 'count sessions: '||${session_count}||' | min: '||min(${session_has_cart_event})||' | max:'||max(${session_has_cart_event}) ;;
-  }
+#   measure: total_session_has_cart_event {
+#     type: sum
+#     sql: ${session_has_cart_event} ;;
+#   }
+#   measure: session_has_cart_event_summary {
+#     group_label: "summary measures"
+#     sql: 'count sessions: '||${session_count}||' | min: '||min(${session_has_cart_event})||' | max:'||max(${session_has_cart_event}) ;;
+#   }
 
   dimension: session_count_cart_events {
     type: number
